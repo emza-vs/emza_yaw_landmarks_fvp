@@ -22,6 +22,12 @@
 namespace arm {
 namespace app {
 
+namespace image {
+
+    void cropImage(const uint8_t* srcPtr,int srcHeight, int srcWidth,
+                         uint8_t* dstPtr,int dstHeight, int dstWidth, int  n_channels);
+} /* namespace image */
+
     /**
      * @brief       Handles the inference event.
      * @param[in]   ctx        Pointer to the application context.

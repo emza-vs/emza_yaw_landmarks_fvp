@@ -27,6 +27,28 @@
 namespace arm {
 namespace app {
 
+namespace image {
+
+    void cropImage(const uint8_t* srcPtr,int srcHeight, int srcWidth,
+                         uint8_t* dstPtr,int dstHeight, int dstWidth, int  n_channels) {
+
+        if (dstWidth > srcWidth || dstHeight > srcHeight) {
+            for (int i=0; i < dstWidth*dstHeight*n_channels; i++) {
+                dstPtr[i] = 0;
+            }
+            return;
+        }
+                     
+        for (int j=0; j < dstHeight; j++) {
+            for (int i=0; i < dstWidth; i++) {
+                for (int k=0; k < n_channels; k++) {
+                    dstPtr[(j*dstWidth + i)*n_channels + k] =  srcPtr[(j*dstWidth + i)*n_channels + k];
+                }
+            }
+        }
+    }
+} /* namespace image */
+
     /**
      * @brief           Presents inference results along using the data presentation
      *                  object.
