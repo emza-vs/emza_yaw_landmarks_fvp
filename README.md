@@ -13,8 +13,7 @@ git checkout -b test_branch ed35a6fea4a1604db81c56fc71f7756822fcf212
 cd ~/demo
 git clone https://github.com/emza-vs/emza_yaw_landmarks_fvp.git
 
-## Merge the ml-embedded-evaluation-kit folder from  emza_yaw_landmarks_fvp into the ml-embedded-evaluation-kit folder from ARM,
-## overwrite the files.
+## Merge the ml-embedded-evaluation-kit folder from  emza_yaw_landmarks_fvp into the ml-embedded-evaluation-kit folder from ARM,overwrite the files.
 
 ## Now go to the modified ml-embedded-evaluation-kit folder and build the example
 
